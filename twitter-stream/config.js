@@ -1,3 +1,8 @@
+if (!process.env.CONSUMER_KEY ||  !process.env.CONSUMER_SECRET ||
+!process.env.ACCESS_TOKEN_KEY || !process.env.ACCESS_TOKEN_SECRET) {
+        throw {name: "ConfigurationError", message: "Missing Twitter API Credentials!" };
+}
+
 module.exports = {
   twitter: {
     consumer_key: process.env.CONSUMER_KEY,

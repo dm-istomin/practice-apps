@@ -3,6 +3,8 @@ var Tweet = mongoose.model('Tweet');
 
 module.exports = function(stream, io) {
     stream.on('data', function(data) {
+        if (!data.user) { return; }
+
         var tweet = {
             twid: data['id'],
             active: false,
@@ -18,5 +20,9 @@ module.exports = function(stream, io) {
         tweetEntry.save(function(err) {
             if (!err) { io.emit('tweet', tweet); }
         });
+    });
+
+    stream.on('error', function(error) {
+        throw error;
     });
 };
