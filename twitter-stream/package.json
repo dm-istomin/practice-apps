@@ -1,0 +1,30 @@
+{
+  "name": "twitter-stream",
+  "version": "0.0.0",
+  "description": "Isomorphic React Example - A Twitter stream that updates in real-time.",
+  "main": "app.js",
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "Dmitriy Istomin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "mongoose": "^4.1.11",
+    "node-jsx": "^0.13.3",
+    "ntwitter": "^0.5.0",
+    "react": "^0.14.0",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "nodemon": "^1.7.1",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.5.0",
+    "watchify": "^3.4.0"
+  }
+}
