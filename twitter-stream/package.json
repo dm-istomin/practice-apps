@@ -4,8 +4,8 @@
   "description": "Isomorphic React Example - A Twitter stream that updates in real-time.",
   "main": "app.js",
   "scripts": {
-    "watch": "watchify app.js -o public/js/bundle.js -v",
-    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "watch": "watchify -t reactify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify -t reactify app.js | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
     "start": "npm run watch & nodemon server.js"
   },
