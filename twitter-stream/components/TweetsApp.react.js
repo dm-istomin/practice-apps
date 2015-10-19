@@ -88,9 +88,7 @@ module.exports = TweetsApp = React.createClass({
         if (tweets.length > 0) {
             var updated = this.state.tweets;
             tweets.forEach(function(tweet) { updated.push(tweet); });
-            setTimeout(function() {
                 self.setState({tweets: updated, paging: false});
-            }, 1000)
         } else {
             this.setState({done: true, paging: false});
         }

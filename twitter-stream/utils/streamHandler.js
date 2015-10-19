@@ -23,6 +23,6 @@ module.exports = function(stream, io) {
     });
 
     stream.on('error', function(error) {
-        throw error;
+        console.log('Stream error: ' + error);
     });
 };

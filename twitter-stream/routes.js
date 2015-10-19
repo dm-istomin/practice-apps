@@ -23,6 +23,6 @@ module.exports = {
     page: function(req, res) {
         Tweet.getTweets(req.params.page, req.params.skip, function(tweets) {
             res.send(tweets); // Render as JSON
-        })
+        });
     }
 }
