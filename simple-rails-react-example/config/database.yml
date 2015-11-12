@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: simple-rails-react-example_development
+  pool: 5
+  username: malct_
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: simple-rails-react-example_test
+  pool: 5
+  username: malct_
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: simple-rails-react-example_production
+  pool: 5
+  username: test-postgres
+  password:
