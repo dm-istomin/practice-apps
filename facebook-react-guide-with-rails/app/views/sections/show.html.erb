@@ -1,0 +1,19 @@
+<h1 class="page-header"><%= @section[:name] %></h1>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <%= @section[:description] %>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Demo
+      </div>
+      <div class="panel-body">
+        <%= react_component @section[:component_name], {}, {id: 'example'} %>
+      </div>
+    </div>
+    <hr>
+    <pre><%= CGI.escapeHTML(render file: "/app/assets/javascripts/components/#{@section[:template_name]}", layout: false).gsub('&lt;', '<').gsub('&gt;', '>').gsub('&quot;', '"').gsub('&#39;', '\'') %></pre>
+  </div>
+</div>

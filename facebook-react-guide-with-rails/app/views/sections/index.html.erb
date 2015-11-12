@@ -1,0 +1,23 @@
+<div id="section-index" class="row">
+  <div class="md-col-12">
+    <h2 class="index-heading text-center">Guide Index</h2>
+  </div>
+  <div class="md-col-12">
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Section Number</th>
+        <th>Rails Example</th>
+        <th>Description</th>
+        <th>Source</th>
+      </tr>
+      <% @sections.each do |section| %>
+        <tr>
+          <td><%= section[:num] %></td>
+          <td><%= link_to section[:name], section_path(id: section[:num]) %></td>
+          <td><%= section[:description] %></td>
+          <td><a href="<%= section[:origin_url] %>">URL</a></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
