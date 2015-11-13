@@ -32,11 +32,12 @@ class SectionsController < ApplicationController
       },
 
       {
-        num: "1-2",
-        name: "JSX Spread Attributes",
-        origin_url: "https://facebook.github.io/react/docs/jsx-spread.html",
-        component_name: "jsx-spread",
-        description: "N/A"
+        num: "2",
+        name: "Interactivity and Dynamic UIs",
+        origin_url: "https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html",
+        component_name: "likeButton",
+        template_name: "interactivity_and_dynamic_uis.js.jsx",
+        description: "Demonstration of how to make UIs interactive."
       }
     ]
   end
