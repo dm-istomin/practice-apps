@@ -39,6 +39,24 @@ class SectionsController < ApplicationController
         component_name: "likeButton",
         template_name: "interactivity_and_dynamic_uis.js.jsx",
         description: "Demonstration of how to make UIs interactive."
+      },
+      {
+        num: "3",
+        name: "Multiple Components",
+        origin_url: "https://facebook.github.io/react/docs/multiple-components.html",
+        template_name: "multiple_components.js.jsx",
+        component_name: "Avatar",
+        props: {username: 'react'},
+        description: "React encourages the use of building components that reuse other components with well-defined interfaces."
+      },
+      {
+        num: "4",
+        name: "Reusable Components",
+        origin_url: "https://facebook.github.io/react/docs/reusable-components.html",
+        template_name: "reusable_components.js.jsx",
+        component_name: "ReusableComponents",
+        props: {},
+        description: "React provides several different features to promote reusability."
       }
     ]
   end
