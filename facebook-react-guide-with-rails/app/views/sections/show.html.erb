@@ -10,7 +10,7 @@
         Demo
       </div>
       <div class="panel-body">
-        <%= react_component @section[:component_name], {date: Time.now.strftime('%H:%M:%S GMT%z (%Z)')}, {id: 'example'} %>
+        <%= react_component @section[:component_name], @section[:props], {id: 'example'} %>
       </div>
     </div>
     <hr>

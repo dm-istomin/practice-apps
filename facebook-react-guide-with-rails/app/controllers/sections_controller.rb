@@ -19,6 +19,7 @@ class SectionsController < ApplicationController
         origin_url: "https://facebook.github.io/react/docs/displaying-data.html",
         component_name: "HelloWorld",
         template_name: "hello_world.js.jsx",
+        props: {date: Time.now.strftime('%H:%M:%S GMT%z (%Z)')},
         description: "Simple example of how React displays data and keeps the interface up-to-date."
       },
 
