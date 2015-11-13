@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   require 'coderay'
-  before_filter :set_sections
+  before_filter :set_sections # Don't actually do this! This is just simulating API/Database calls
 
   def index
   end
