@@ -1,4 +1,4 @@
-<h1 class="page-header"><%= @section[:name] %></h1>
+<h1 class="page-header"> <%= link_to '←', :back %> <%= @section[:name] %></h1>
 
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -10,10 +10,10 @@
         Demo
       </div>
       <div class="panel-body">
-        <%= react_component @section[:component_name], {}, {id: 'example'} %>
+        <%= react_component @section[:component_name], {date: Time.now.strftime('%H:%M:%S GMT%z (%Z)')}, {id: 'example'} %>
       </div>
     </div>
     <hr>
-    <pre><%= CGI.escapeHTML(render file: "/app/assets/javascripts/components/#{@section[:template_name]}", layout: false).gsub('&lt;', '<').gsub('&gt;', '>').gsub('&quot;', '"').gsub('&#39;', '\'') %></pre>
+    <%= raw coderay('javascript', (render file: "/app/assets/javascripts/components/#{@section[:template_name]}", layout: false)) %>
   </div>
 </div>

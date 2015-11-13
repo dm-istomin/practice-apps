@@ -1,4 +1,5 @@
 class SectionsController < ApplicationController
+  require 'coderay'
   before_filter :set_sections
 
   def index

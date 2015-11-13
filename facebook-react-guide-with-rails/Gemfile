@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'react-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'coderay'
 
 group :development, :test do
   gem 'byebug'

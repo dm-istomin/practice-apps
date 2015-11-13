@@ -1,0 +1,24 @@
+/* CodeRay syntax highlighting */
+.CodeRay .symbol { color: #a385fc; }
+.CodeRay .color { color: #a385fc; }
+.CodeRay .class { color: #a7e040; }
+.CodeRay .key { color: #6bd9ed; }
+.CodeRay .value { color: #6bd9ed;}
+.CodeRay .inline-delimiter { color: #f62d73; }
+.CodeRay .type { color: #F62D73;}
+.CodeRay .float { color: #a385fc; }
+.CodeRay .string { color: #e5da7a; }
+.CodeRay .comment { color: #75715f; }
+.CodeRay .keyword { color: #f62d73; }
+.CodeRay .entity { color: #f62d73; }
+.CodeRay .predefined-constant { color: #a7e040; }
+.CodeRay .function { color: #a7e040; }
+.CodeRay .constant { color: #6bd9ed;}
+.CodeRay .regexp .inline-delimiter { color: #e5da7a; }
+.CodeRay .regexp .char { color: #a385fc; }
+.CodeRay .regexp .delimiter { color: #e5da7a; }
+.CodeRay .regexp .content { color: #e5da7a; }
+.CodeRay .regexp .inline { color: #e5da7a; }
+.CodeRay .regexp .inline .delimiter { color: #e5da7a; }
+.CodeRay .regexp .inline .constant { color: #6bd9ed; }
+.CodeRay .regexp .modifier { color: #e5da7a; }
