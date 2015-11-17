@@ -11,7 +11,9 @@ var ReusableComponents = React.createClass({
           'React.PropTypes.object',
           'React.PropTypes.string'
         ]} funcProp="not a function!"/>
-        <h4>Default Prop Values</h4>
+        <h4>Mixins (With a Timer Demo)</h4>
+        <TickTock />
+        <h4></h4>
       </div>
     );
   }
@@ -47,3 +49,37 @@ var PropValidationDemo = React.createClass({
   );
   }
 })
+
+var SetIntervalMixin = {
+  componentWillMount: function() {
+    this.intervals = [];
+  },
+
+  setInterval: function() {
+    this.intervals.push(setInterval.apply(null, arguments));
+  },
+
+  componentWillUnmount: function() {
+    this.intervals.forEach(clearInterval);
+  }
+};
+
+var TickTock = React.createClass({
+  mixins: [SetIntervalMixin],
+  getInitialState: function() {
+    return {seconds: 0};
+  },
+  componentDidMount: function() {
+    this.setInterval(this.tick, 1000);
+  },
+  tick: function() {
+    this.setState({seconds: this.state.seconds + 1});
+  },
+  render: function() {
+    return (
+      <p>
+        React has been running for <b>{this.state.seconds}</b> seconds.
+      </p>
+    )
+  }
+});
